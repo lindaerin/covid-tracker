@@ -8,3 +8,4 @@ Display data from (https://disease.sh/) of current covid 19 information of cases
 - Leaflet
 
 ## Demo of the Project
+![alt text](public/demo.png)
