@@ -67,7 +67,6 @@ function App() {
         setCountry(countryCode);
         setCountryInfo(data);
         setMapCenter(data.countryInfo.lat, data.countryInfo.long);
-        console.log("lat", data.countryInfo.lat, "long", data.countryInfo.long);
         setMapZoom(5);
       });
   };
@@ -76,7 +75,7 @@ function App() {
     <div className="app">
       <div className="app__left">
         <div className="app__header">
-          <h1>COVID-19 Tracker</h1>
+          <h1>COVID-19 TRACKER</h1>
           <FormControl className="app__dropdown">
             <Select
               variant="outlined"
@@ -95,18 +94,24 @@ function App() {
 
         <div className="app__stats">
           <InfoBox
+            isRed
+            active={casesType === "cases"}
             onClick={(e) => setCasesType("cases")}
             title="Coronavirus Cases"
             cases={prettyPrintStat(countryInfo.todayCases)}
             total={countryInfo.cases}
           />
           <InfoBox
+            isGreen
+            active={casesType === "recovered"}
             onClick={(e) => setCasesType("recovered")}
             title="Recovered"
             cases={prettyPrintStat(countryInfo.todayRecovered)}
             total={countryInfo.recovered}
           />
           <InfoBox
+            isGrey
+            active={casesType === "deaths"}
             onClick={(e) => setCasesType("deaths")}
             title="Death"
             cases={prettyPrintStat(countryInfo.todayDeaths)}

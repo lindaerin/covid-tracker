@@ -8,7 +8,7 @@ body {
 
 .app {
   display: flex;
-  padding: 1rem;
+  padding: 0 0.75rem;
 }
 
 .app__header {
@@ -17,6 +17,16 @@ body {
   justify-content: space-between;
   margin-bottom: 20px;
 }
+
+/* .app___header > h1 {
+  color: #fc3c3c; 
+  font-size: 2rem;
+} */
+
+.app__dropdown {
+  background-color: #fff;
+}
+
 
 .app__left {
   flex: 1;
